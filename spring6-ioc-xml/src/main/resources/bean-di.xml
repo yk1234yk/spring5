@@ -4,10 +4,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--1.set方法注入-->
-<!--    <bean id="book" class="com.atguigu.spring6.iocxml.di.Book">-->
-<!--        <property name="bname" value="稻妻"/>-->
-<!--        <property name="author" value="刻晴"/>-->
-<!--    </bean>-->
+    <bean id="book" class="com.atguigu.spring6.iocxml.di.Book">
+        <property name="bname" value="稻妻"/>
+        <property name="author" value="刻晴"/>
+<!--        <property name="others">-->
+<!--            &lt;!&ndash;表示空值&ndash;&gt;-->
+<!--            <null/>-->
+<!--        </property>-->
+<!--        <property name="others" value="&lt;&gt;"/>-->
+        <property name="others">
+            <value><![CDATA[a<b]]></value>
+        </property>
+    </bean>
     <!--2.构造器方法注入-->
     <bean id="bookCon" class="com.atguigu.spring6.iocxml.di.Book">
         <constructor-arg name="bname" value="珊瑚宫"/>

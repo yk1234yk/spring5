@@ -4,9 +4,24 @@ public class Book {
     private String bname;
     private String author;
 
+    private String others;
+
+    public void setOthers(String others) {
+        this.others = others;
+    }
+
     //    生成set方法
     public void setBname(String bname) {
         this.bname = bname;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bname='" + bname + '\'' +
+                ", author='" + author + '\'' +
+                ", others='" + others + '\'' +
+                '}';
     }
 
     public Book() {
@@ -21,14 +36,6 @@ public class Book {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bname='" + bname + '\'' +
-                ", author='" + author + '\'' +
-                '}';
     }
 
     public static void main(String[] args) {
