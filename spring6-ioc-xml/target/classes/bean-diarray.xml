@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.数组类型属性-->
+    <bean id="emp" class="com.atguigu.spring6.iocxml.diTest.Emp">
+        <!-- 普通属性类型-->
+        <property name="ename" value="宵宫"/>
+        <property name="age" value="20"/>
+        <!-- 对象属性类型-->
+        <property name="dept" ref="dept"/>
+        <!--数组属性类型-->
+        <property name="loves">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>打游戏</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="dept" class="com.atguigu.spring6.iocxml.diTest.Dept">
+        <property name="dname" value="后勤部"/>
+    </bean>
+</beans>
