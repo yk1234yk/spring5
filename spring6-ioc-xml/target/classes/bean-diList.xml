@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="empone" class="com.atguigu.spring6.iocxml.diTest.Emp">
+        <property name="ename" value="芭芭拉"/>
+        <property name="age" value="20"/>
+    </bean>
+    <bean id="emptwo" class="com.atguigu.spring6.iocxml.diTest.Emp">
+        <property name="ename" value="宵宫"/>
+        <property name="age" value="20"/>
+    </bean>
+    <bean id="empthree" class="com.atguigu.spring6.iocxml.diTest.Emp">
+        <property name="ename" value="温迪"/>
+        <property name="age" value="20"/>
+    </bean>
+    <bean id="dept" class="com.atguigu.spring6.iocxml.diTest.Dept">
+        <property name="dname" value="武器部"/>
+        <property name="empList">
+            <list>
+                <ref bean="empone"/>
+                <ref bean="emptwo"/>
+                <ref bean="empthree"/>
+                <!--如果是字符串：value-->
+            </list>
+        </property>
+    </bean>
+
+</beans>
