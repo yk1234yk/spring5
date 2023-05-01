@@ -13,12 +13,16 @@
 <!--        </property>-->
 <!--        <property name="others" value="&lt;&gt;"/>-->
         <property name="others">
-            <value><![CDATA[a<b]]></value>
+            <value><![CDATA[ajsdh4234>324?]]></value>
         </property>
     </bean>
     <!--2.构造器方法注入-->
     <bean id="bookCon" class="com.atguigu.spring6.iocxml.di.Book">
-        <constructor-arg name="bname" value="珊瑚宫"/>
-        <constructor-arg name="author" value="心海"/>
+<!--        <constructor-arg name="bname" value="珊瑚宫"/>-->
+<!--        <constructor-arg name="author" value="心海"/>-->
+<!--        <constructor-arg name="others" value="女"/>-->
+        <constructor-arg index="0" value="芭芭拉"/>
+        <constructor-arg index="1" value="蒙德"/>
+        <constructor-arg index="2" value="女"/>
     </bean>
 </beans>

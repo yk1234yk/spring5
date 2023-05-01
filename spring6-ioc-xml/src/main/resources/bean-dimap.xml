@@ -32,5 +32,14 @@
                 <entry value-ref="teacher2" key="10020"/>
             </map>
         </property>
+        <property name="lessonList">
+            <list>
+                <ref bean="lesson"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="lesson" class="com.atguigu.spring6.iocxml.dimap.Lesson">
+        <property name="lessonName" value="计算机20-2班"/>
     </bean>
 </beans>

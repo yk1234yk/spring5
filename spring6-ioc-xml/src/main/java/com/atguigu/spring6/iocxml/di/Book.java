@@ -28,10 +28,11 @@ public class Book {
         System.out.println("无参数构造执行了...");
     }
 
-    public Book(String bname, String author) {
+    public Book(String bname, String author,String others) {
         System.out.println("有参数构造执行了...");
         this.bname = bname;
         this.author = author;
+        this.others=others;
     }
 
     public void setAuthor(String author) {
@@ -45,6 +46,6 @@ public class Book {
         book.setAuthor("珊瑚宫");
 
         //通过构造器注入
-        Book book1 = new Book("宵宫", "稻妻");
+        Book book1 = new Book("宵宫", "稻妻","女");
     }
 }

@@ -7,12 +7,22 @@ public class Dept {
     //一个部门有很多员工
     private List<Emp> empList;
     private String dname;
+    private Integer did;
 
     public void info(){
         System.out.println("部门名称:"+dname);
-        for (Emp emp:empList){
-            System.out.println(emp.getEname());
-        }
+        System.out.println("部门编号:"+did);
+//        for (Emp emp:empList){
+//            System.out.println(emp.getEname());
+//        }
+    }
+
+    public Integer getDid() {
+        return did;
+    }
+
+    public void setDid(Integer did) {
+        this.did = did;
     }
 
     public String getDname() {

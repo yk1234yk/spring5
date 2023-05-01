@@ -11,6 +11,9 @@
     <modules>
         <module>Spring-frist</module>
         <module>spring6-ioc-xml</module>
+        <module>spring6-ioc-annotation</module>
+        <module>spring6-reflect</module>
+        <module>atguigu-spring</module>
     </modules>
 
     <dependencies>
@@ -38,7 +41,7 @@
             <artifactId>log4j-slf4j2-impl</artifactId>
             <version>2.19.0</version>
         </dependency>
-<!--        不清楚-->
+        <!--        不清楚-->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -49,20 +52,27 @@
             <artifactId>aspectjrt</artifactId>
             <version>1.5.4</version>
         </dependency>
-<!--        -->
+        <!--        -->
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.30</version>
         </dependency>
-<!--        数据源-->
+        <!--        数据源-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.2.15</version>
         </dependency>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>2.1.0</version>
+        </dependency>
     </dependencies>
+
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

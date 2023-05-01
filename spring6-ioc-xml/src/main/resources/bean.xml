@@ -8,6 +8,6 @@
     <bean id="user1" class="com.atguigu.spring6.iocxml.User"/>
 
     <!--2.一个接口实现类获取过程-->
-    <bean id="userDao" class="com.atguigu.spring6.iocxml.bean.UserDaoImpl"/>
-    <bean id="personDao" class="com.atguigu.spring6.iocxml.bean.PersonDaoImpl"/>
+    <bean id="userDaoImpl" class="com.atguigu.spring6.iocxml.bean.UserDaoImpl"/>
+    <bean id="personDaoImpl" class="com.atguigu.spring6.iocxml.bean.PersonDaoImpl"/>
 </beans>

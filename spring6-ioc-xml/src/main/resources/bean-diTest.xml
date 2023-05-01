@@ -8,38 +8,67 @@
         1.创建两个类对象:dept和emp
         2.在emp的bean标签里面，使用property引入dept的bean
     -->
-        <bean id="dept" class="com.atguigu.spring6.iocxml.diTest.Dept">
-            <property name="dname" value="安保部"/>
-        </bean>
-        <bean id="emp" class="com.atguigu.spring6.iocxml.diTest.Emp">
-            <!--普通属性注入-->
-            <property name="ename" value="刻晴"/>
-            <property name="age" value="21"/>
-            <!--注入对象类型属性-->
-            <property name="dept" ref="dept"/>
-        </bean>
+    <bean id="dept" class="com.atguigu.spring6.iocxml.diTest.Dept">
+        <property name="dname" value="安保部"/>
+        <property name="did" value="1"/>
+    </bean>
+    <bean id="emp" class="com.atguigu.spring6.iocxml.diTest.Emp">
+        <!--普通属性注入-->
+        <property name="ename" value="刻晴"/>
+        <property name="age" value="21"/>
+        <!--注入对象类型属性-->
+        <property name="dept" ref="dept"/>
+        <!--            注入数组类型-->
+        <property name="loves">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>打游戏</value>
+            </array>
+        </property>
+    </bean>
 
     <!--2.第二种方式：内部bean注入-->
-        <bean id="emp2" class="com.atguigu.spring6.iocxml.diTest.Emp">
-            <!--普通属性注入-->
-            <property name="ename" value="凝光"/>
-            <property name="age" value="22"/>
-            <!--内部bean-->
-            <property name="dept">
-                <bean id="dept2" class="com.atguigu.spring6.iocxml.diTest.Dept">
-                    <property name="dname" value="财务部"/>
-                </bean>
-            </property>
-        </bean>
+    <bean id="emp2" class="com.atguigu.spring6.iocxml.diTest.Emp">
+        <!--普通属性注入-->
+        <property name="ename" value="凝光"/>
+        <property name="age" value="22"/>
+        <!--内部bean-->
+        <property name="dept">
+            <bean id="dept2" class="com.atguigu.spring6.iocxml.diTest.Dept">
+                <property name="dname" value="财务部"/>
+                <property name="did" value="2"/>
+            </bean>
+        </property>
+        <!--            注入数组类型-->
+        <property name="loves">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>打游戏</value>
+            </array>
+        </property>
+    </bean>
 
     <!--3.级联赋值-->
     <bean id="dept3" class="com.atguigu.spring6.iocxml.diTest.Dept">
         <property name="dname" value="后勤部"/>
+        <property name="did" value="3"/>
     </bean>
     <bean id="emp3" class="com.atguigu.spring6.iocxml.diTest.Emp">
         <property name="ename" value="心海"/>
         <property name="age" value="23"/>
         <property name="dept" ref="dept3"/>
-<!--        <property name="dept.dname" value="测试部"/>-->
+        <!--        <property name="dept" ref="dept"/>-->
+        <!--        <property name="dept.dname" value="测试部"/>-->
+        <!--        <property name="dept.did" value="4"/>-->
+        <property name="loves">
+            <array>
+                <value>吃饭</value>
+                <value>吃饭</value>
+                <value>吃饭</value>
+            </array>
+        </property>
     </bean>
+
 </beans>

@@ -17,7 +17,9 @@ public class TestUser {
         //加载spring配置文件,对象创建
         ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         //获取创建的对象
-        User user = (User) context.getBean("user");
+//        User user = (User) context.getBean("user");
+        User user = context.getBean(User.class);
+//        User user = context.getBean("user", User.class);
         System.out.println(user);
         //使用对象调用方法进行测试
         user.add();

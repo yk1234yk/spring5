@@ -45,6 +45,7 @@
     </bean>
 
     <bean id="teacherone" class="com.atguigu.spring6.iocxml.dimap.Teacher">
+<!--        set注入-->
         <property name="teacherId" value="1"/>
         <property name="teacherName" value="张三"/>
     </bean>

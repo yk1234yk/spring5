@@ -12,7 +12,7 @@ public class TestStu {
     @Test
     public void test(){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean-diutil.xml");
-        Student student = context.getBean("studentp", Student.class);
+        Student student = context.getBean("student", Student.class);
         student.run();
     }
 }

@@ -12,7 +12,7 @@
     <context:property-placeholder location="classpath:jdbc.properties"/>
 <!--    完成数据库信息注入-->
     <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="url" value="${jdbc.url}"/>
+        <property name="url" value="${jdbc.driver}"/>
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
         <property name="driverClassName" value="${jdbc.driver}"/>
