@@ -5,7 +5,7 @@
 
 <!--    根据类型自动装配-->
 <!--    <bean id="userController" class="com.atguigu.spring6.iocxml.auto.controller.UserController" autowire="byType"/>-->
-<!--    <bean id="userService" class="com.atguigu.spring6.iocxml.auto.service.UserServiceImpl" autowire="byType"/>&lt;!&ndash;    根据类型自动装配&ndash;&gt;-->
+<!--    <bean id="userService" class="com.atguigu.spring6.iocxml.auto.service.UserServiceImpl" autowire="byType"/>-->
 
 <!--    根据名称自动装配-->
     <bean id="userController" class="com.atguigu.spring6.iocxml.auto.controller.UserController" autowire="byName"/>
@@ -13,7 +13,5 @@
 
 
 
-    <bean id="userDao" class="com.atguigu.spring6.iocxml.auto.dao.UserDaoImpl">
-
-    </bean>
+    <bean id="userDao" class="com.atguigu.spring6.iocxml.auto.dao.UserDaoImpl"/>
 </beans>

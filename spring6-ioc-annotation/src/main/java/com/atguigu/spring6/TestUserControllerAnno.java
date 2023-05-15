@@ -7,7 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestUserControllerAnno {
     public static void main(String[] args) {
-
         //加载配置类
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         UserController bean = context.getBean(UserController.class);

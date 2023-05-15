@@ -8,12 +8,12 @@ import org.springframework.stereotype.Controller;
 public class UserController {
 
 //    1.根据名称进行注入
-//    @Resource(name = "myUserService")
-//    private UserService userService;
+    @Resource(name = "myUserService")
+    private UserService userService;
 
 //    2/根据类型配置
-    @Resource
-    private UserService userService;
+//    @Resource
+//    private UserService userService;
 
     public void add(){
         System.out.println("controller...");
