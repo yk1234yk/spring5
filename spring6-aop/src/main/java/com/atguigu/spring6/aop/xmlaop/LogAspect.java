@@ -55,8 +55,4 @@ public class LogAspect {
         return result;
     }
 
-    //重用切入点表达式
-    @Pointcut(value = "execution(* com.atguigu.spring6.aop.xmlaop.CalculatorImpl.*(..))")
-    public void pointcut() {
-    }
 }
