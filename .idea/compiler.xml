@@ -10,6 +10,7 @@
         <module name="spring6-jdbc-tx" />
         <module name="spring6-resource" />
         <module name="spring6-ioc-xml" />
+        <module name="spring6-i18n" />
         <module name="spring6-junit" />
         <module name="atguigu-spring" />
         <module name="spring6-aop" />
